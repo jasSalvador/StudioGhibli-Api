@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <!--iconos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script defer src="./assets/js/script.js"></script>
+    <!--favicon-->
+    <link rel="icon" type="image/x-icon" href="./assets/img/b557b2c98ab400c3c95c138d2d9b93a2.png">
+    <title>Studio Ghibli</title>
+</head>
+<body>
+    <section class="contenedorSup text-center mx-auto">
+        <div class="container py-5">
+            <h1 class="text-center text-black fw-bold pt-5 mx-auto">STUDIO GHIBLI</h1>
+            <hr>
+            <H2>Lista de todas las películas</H2>
+            <h5 class="container text-center text-dark mx-auto py-5">¿Sabías que Studio Ghibli es un estudio de animación japonés
+                fundado en 1985 por Hayao Miyazaki y a la fecha tiene un total de 23 películas producidas, de las cuales
+                6 son las más taquilleras del cine japonés?. Además 5 han sido nominadas al Óscar, ganando el premio a
+                mejor película de animación "El viaje de Chihiro" en el año 2008.</h5>
+            <h6 class="text-center mx-auto py-2">*Al seleccionar una película, podrás ver un pequeño resumen y su información.</h6>
+            <div class="d-flex align-items-center justify-content-center pb-5 mx-auto">
+                <select class="form-select form-select-sm w-50" id="selectPelicula">
+                    <option selected>Selecciona una película</option>
+                    <option value="Arrietty">Arrietty</option>
+                    <option value="Castle in the Sky">Castle in the Sky</option>
+                    <option value="Earwig and the Witch">Earwig and the Witch</option>
+                    <option value="From Up on Poppy Hill">From Up on Poppy Hill</option>
+                    <option value="Grave of the Fireflies">Grave of the Fireflies</option>
+                    <option value="How Do You Live?">How Do You Live?</option>
+                    <option value="Howl's Moving Castle">Howl's Moving Castle</option>
+                    <option value="Kiki's Delivery Service">Kiki's Delivery Service</option>
+                    <option value="My Neighbor Totoro">My Neighbor Totoro</option>
+                    <option value="My Neighbors the Yamadas">My Neighbors the Yamadas</option>
+                    <option value="Ocean Waves">Ocean Waves</option>
+                    <option value="Only Yesterday">Only Yesterday</option>
+                    <option value="Pom Poko">Pom Poko</option>
+                    <option value="Ponyo">Ponyo</option>
+                    <option value="Porco Rosso">Porco Rosso</option>
+                    <option value="Princess Mononoke">Princess Mononoke</option>
+                    <option value="Spirited Away">Spirited Away</option>
+                    <option value="Tales from Earthsea">Tales from Earthsea</option>
+                    <option value="The Cat Returns">The Cat Returns</option>
+                    <option value="The Tale of Princess Kaguya">The Tale of Princess Kaguya</option>
+                    <option value="The Wind Rises">The Wind Rises</option>
+                    <option value="When Marnie Was There">When Marnie Was There</option>
+                    <option value="Whisper of the Heart">Whisper of the Heart</option>
+                </select>
+            </div>
+        </div>
+    </section>
+    <!--seccion inferior-->
+    <section class="contenedorInf p-5">
+        <!--tarjeta-->
+        <div class="card ocultarCard text-center mx-auto my-5" id="card" style="max-width: 700px;">
+            <div class="row g-0 d-flex align-items-center">
+                <div class="col-md-4" id="imagenCard">
+                    <img src="" id="cardImg" class="img-fluid rounded-start p-3 d-block" alt="Pelicula">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h3 id="cardTitulo" class="card-title"></h3> <!--titulo-->
+                        <p id="cardDesc" class="card-text"></p> <!--descripcion-->
+                        <h6 id="cardRoma" class="text-center"></h6> <!--titulo romanizado-->
+                        <hr>
+                        <h6 id="cardEstreno" class="text-center"></h6> <!--fecha estreno-->
+                        <hr>
+                        <h6 id="cardDirector" class="text-center"></h6> <!--director-->
+                        <hr>
+                        <p class="small px-4 text-center">*Puedes dar click en "selecciona una película" para volver a cerrar esta ventana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--carrusel-->
+        <div class="container col-lg-9 col-sm-11 pb-5 mx-auto">
+            <h4 class="text-center py-4 px-2 mx-auto">Y COMO SABEMOS QUE ERES FAN DE STUDIO GHIBLI, TE DEJAMOS UNA GALERÍA CON SUS MEJORES GIF.</h4>
+            <div id="carouselGif" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/img/ghibli-totoro-1582741985.gif" class="d-block w-100" alt="Mi vecino Totoro">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Mi vecino Totoro</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/el-viaje-de-chihiro-1582741980.gif" class="d-block w-100" alt="El viaje de Chihiro">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>El viaje de Chihiro</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/cuentos-de-terramar-1582741982.gif" class="d-block w-100" alt="Cuentos de terramar">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Cuentos de terramar</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/el-cuento-de-la-princesa-kaguya-1582742007.gif" class="d-block w-100"
+                            alt="El cuento de la princesa Kaguya">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>El cuento de la princesa Kaguya</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/la-tumba-de-las-luciernagas-1582742006.gif" class="d-block w-100"
+                            alt="La tumba de las luciernagas">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>La tumba de las luciernagas</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/el-castillo-en-el-cielo-1582741982.gif" class="d-block w-100" alt="El castillo en el cielo">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>El castillo en el cielo</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/la-princesa-mononoke-1582742004.gif" class="d-block w-100" alt="La princesa Mononoke">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>La princesa Mononoke</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/arriety-y-el-mundo-de-los-diminutos-1582741991.gif" class="d-block w-100"
+                            alt="Arrietty y el mundo de los diminutos">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Arrietty y el mundo de los diminutos</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/el-recuerdo-de-marnie-1582742020.gif" class="d-block w-100" alt="El recuerdo de Marnie">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>El recuerdo de Marnie</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/nausicaa-del-valle-del-viento-1582742010.gif" class="d-block w-100"
+                            alt="Nausicaä del Valle del Viento">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Nausicaä del Valle del Viento</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/nicky-la-aprendiz-de-bruja-1582742012.gif" class="d-block w-100"
+                            alt="Nicky, la aprendiz de bruja">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Nicky, la aprendiz de bruja</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/ponyo-en-el-acantilado-1582742019.gif" class="d-block w-100" alt="Ponyo en el acantilado">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ponyo en el acantilado</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/el-viento-se-levanta-1582741996.gif" class="d-block w-100" alt="El viento se levanta">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>El viento se levanta</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/img/pompoko-1582742026.gif" class="d-block w-100" alt="Pompoko">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Pompoko</h5>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselGif"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselGif"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-black py-5">
+        <p class="small text-light text-center py-4 mt-4 mx-auto">Desarrollado por Jasmin (2023) <i class="bi bi-r-circle"></i></p>
+    </footer>
+</body>
+</html>
